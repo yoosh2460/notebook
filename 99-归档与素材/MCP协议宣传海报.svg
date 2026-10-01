@@ -1,0 +1,115 @@
+<svg width="1600" height="2000" viewBox="0 0 1600 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="2000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071019"/>
+      <stop offset="0.52" stop-color="#0B1720"/>
+      <stop offset="1" stop-color="#15120D"/>
+    </linearGradient>
+    <linearGradient id="core" x1="520" y1="640" x2="1080" y2="1220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7DE7FF"/>
+      <stop offset="0.52" stop-color="#2BB8D6"/>
+      <stop offset="1" stop-color="#F2B84B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 940) rotate(90) scale(650 650)">
+      <stop offset="0" stop-color="#53D8F8" stop-opacity="0.32"/>
+      <stop offset="0.48" stop-color="#53D8F8" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#53D8F8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title { font: 800 136px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; letter-spacing: 0; fill: #F8FBFF; }
+      .subtitle { font: 500 42px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; letter-spacing: 0; fill: #BFD2DC; }
+      .footer { font: 500 34px "Inter", "Helvetica Neue", Arial, sans-serif; letter-spacing: 3px; fill: #8FA7B3; }
+      .nodeText { font: 600 28px "Inter", "PingFang SC", sans-serif; letter-spacing: 0; fill: #DDF6FF; }
+      .smallText { font: 500 22px "PingFang SC", "Inter", sans-serif; letter-spacing: 0; fill: #91A9B5; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="2000" fill="url(#bg)"/>
+  <rect width="1600" height="2000" fill="url(#glow)"/>
+
+  <g opacity="0.22">
+    <path d="M160 420H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M160 620H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M160 820H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M160 1020H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M160 1220H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M160 1420H1440" stroke="#547080" stroke-width="1"/>
+    <path d="M300 300V1540" stroke="#547080" stroke-width="1"/>
+    <path d="M550 300V1540" stroke="#547080" stroke-width="1"/>
+    <path d="M800 300V1540" stroke="#547080" stroke-width="1"/>
+    <path d="M1050 300V1540" stroke="#547080" stroke-width="1"/>
+    <path d="M1300 300V1540" stroke="#547080" stroke-width="1"/>
+  </g>
+
+  <text x="800" y="250" text-anchor="middle" class="title">MCP 协议</text>
+  <text x="800" y="325" text-anchor="middle" class="subtitle">连接 AI 与工具生态的标准化上下文协议</text>
+
+  <g opacity="0.82" stroke-linecap="round">
+    <path d="M800 920C655 780 520 735 385 735" stroke="#61DDF5" stroke-width="7"/>
+    <path d="M800 920C940 770 1082 720 1220 710" stroke="#61DDF5" stroke-width="7"/>
+    <path d="M800 920C650 990 540 1128 462 1275" stroke="#F0B14D" stroke-width="7"/>
+    <path d="M800 920C970 1018 1078 1160 1162 1306" stroke="#F0B14D" stroke-width="7"/>
+    <path d="M800 920V552" stroke="#DDF6FF" stroke-width="6"/>
+    <path d="M800 920V1445" stroke="#DDF6FF" stroke-width="6"/>
+  </g>
+
+  <g opacity="0.35" filter="url(#softGlow)">
+    <circle cx="800" cy="920" r="285" stroke="#5EE3FF" stroke-width="4"/>
+    <circle cx="800" cy="920" r="215" stroke="#F3B94D" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <circle cx="800" cy="920" r="200" fill="#0E2530" stroke="url(#core)" stroke-width="8"/>
+    <path d="M710 855H890C928 855 958 885 958 923C958 961 928 991 890 991H710C672 991 642 961 642 923C642 885 672 855 710 855Z" fill="#081219" stroke="#88ECFF" stroke-width="5"/>
+    <text x="800" y="938" text-anchor="middle" class="title" style="font-size:82px">MCP</text>
+    <text x="800" y="1036" text-anchor="middle" class="smallText">Context · Tools · Protocol</text>
+  </g>
+
+  <g>
+    <rect x="626" y="452" width="348" height="110" rx="22" fill="#101F28" stroke="#5FE2FA" stroke-width="3"/>
+    <text x="800" y="500" text-anchor="middle" class="nodeText">AI Model</text>
+    <text x="800" y="536" text-anchor="middle" class="smallText">统一上下文入口</text>
+
+    <rect x="220" y="666" width="330" height="138" rx="22" fill="#101F28" stroke="#5FE2FA" stroke-width="3"/>
+    <text x="385" y="723" text-anchor="middle" class="nodeText">数据库</text>
+    <text x="385" y="761" text-anchor="middle" class="smallText">MySQL · Redis · Vector DB</text>
+
+    <rect x="1060" y="640" width="330" height="138" rx="22" fill="#101F28" stroke="#5FE2FA" stroke-width="3"/>
+    <text x="1225" y="697" text-anchor="middle" class="nodeText">API 与服务</text>
+    <text x="1225" y="735" text-anchor="middle" class="smallText">Spring · RPC · SaaS</text>
+
+    <rect x="280" y="1205" width="365" height="138" rx="22" fill="#151E22" stroke="#F2B84B" stroke-width="3"/>
+    <text x="462" y="1262" text-anchor="middle" class="nodeText">开发工具</text>
+    <text x="462" y="1300" text-anchor="middle" class="smallText">IDE · Files · Git</text>
+
+    <rect x="980" y="1235" width="365" height="138" rx="22" fill="#151E22" stroke="#F2B84B" stroke-width="3"/>
+    <text x="1162" y="1292" text-anchor="middle" class="nodeText">企业系统</text>
+    <text x="1162" y="1330" text-anchor="middle" class="smallText">权限 · 审计 · 观测</text>
+
+    <rect x="604" y="1416" width="392" height="120" rx="22" fill="#101F28" stroke="#DDF6FF" stroke-width="3"/>
+    <text x="800" y="1468" text-anchor="middle" class="nodeText">标准化连接层</text>
+    <text x="800" y="1506" text-anchor="middle" class="smallText">低耦合 · 可扩展 · 可治理</text>
+  </g>
+
+  <g opacity="0.8">
+    <circle cx="385" cy="735" r="11" fill="#61DDF5"/>
+    <circle cx="1220" cy="710" r="11" fill="#61DDF5"/>
+    <circle cx="462" cy="1275" r="11" fill="#F0B14D"/>
+    <circle cx="1162" cy="1306" r="11" fill="#F0B14D"/>
+    <circle cx="800" cy="552" r="10" fill="#DDF6FF"/>
+    <circle cx="800" cy="1445" r="10" fill="#DDF6FF"/>
+  </g>
+
+  <g opacity="0.68">
+    <rect x="234" y="1606" width="1132" height="2" fill="#314956"/>
+    <text x="800" y="1684" text-anchor="middle" class="subtitle" style="font-size:34px">让模型通过统一协议安全访问上下文、工具与业务能力</text>
+    <text x="800" y="1818" text-anchor="middle" class="footer">MODEL CONTEXT PROTOCOL</text>
+  </g>
+</svg>
